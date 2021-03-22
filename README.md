@@ -15,33 +15,32 @@ First, create an instance of the SRAM class:
 SRAM sram_inst(usr_socket_choice);
 ```
 ### Parameters:
+| *Name*, **type**             | Description             |
+| ---------------------------- | ----------------------- |
+| *usr_socket_choice*, **int** | Letter of target socket |
 
-|                           |                                                             |     |
-| ------------------------- | ----------------------------------------------------------- | --- |
-| usr_socket_choice, *char* | Letter of MikroBUS socket that target board is plugged into |
-| ---                       | ---                                                         | --- |
 
 The ```sram_inst``` object is now assigned to a board at the socket specified.
 
 ### Attributes:
 
-|                  |                                        |     |
-| ---------------- | -------------------------------------- | --- |
-| board_cs, *int*  | Pin number of target socket CS pin     |
-| board_led, *int* | Pin number of corresponding socket LED |
-| ---              | ---                                    | --- |
+| *Name*, **type**     | Description                            |
+| -------------------- | -------------------------------------- |
+| *board_cs*, **int**  | Pin number of target socket CS pin     |
+| *board_led*, **int** | Pin number of corresponding socket LED |
 
 ### Methods:
-|     |     |  |
-| --- | --- ||
-| WriteBoardLED(); | Turn on target board's socket LED  |
-| ClearBoardLED(); | Turn off target board's socket LED |
-| WriteByte(*adr, write_data*); | Write *write_data* target device at memory location *adr*  |
-| ReadByte(*adr*); | Read from address *adr* of target device |
-| GetBoardMode(); | Return current mode of target device |
-| SetBoardMode(*mode*); | Set target device to *mode* |
-| WriteCheckerboard(); | Write alternating 1s and 0s throughout target device memory |
-| ----------------------------- | ----- |  |
+
+| Method                        | Description                                                 |
+| ----------------------------- | ----------------------------------------------------------- |
+| WriteBoardLED();              | Turn on target board's socket LED                           |
+| ClearBoardLED();              | Turn off target board's socket LED                          |
+| WriteByte(*adr, write_data*); | Write *write_data* target device at memory location *adr*   |
+| ReadByte(*adr*);              | Read from address *adr* of target device                    |
+| GetBoardMode();               | Return current mode of target device                        |
+| SetBoardMode(*mode*);         | Set target device to *mode*                                 |
+| WriteCheckerboard();          | Write alternating 1s and 0s throughout target device memory |
+
 
 ```c++
 WriteBoardLED();
