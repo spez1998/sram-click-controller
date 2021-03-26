@@ -6,7 +6,6 @@
 
 #include <string>
 #include <SPI.h>
-#include "sram_opcodes.h"
 #include "flip_click_defs.h"
 
 #define EDIO      0x3B
