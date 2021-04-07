@@ -4,7 +4,6 @@
 #ifndef SRAM_h
 #define SRAM_h
 
-#include <string>
 #include <SPI.h>
 #include "flip_click_defs.h"
 
